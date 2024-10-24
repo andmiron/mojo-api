@@ -22,7 +22,7 @@ closeWithGrace(async function ({ signal, err, manual }) {
 })
 
 try {
-  await server.listen({ port: process.env.PORT })
+  await server.listen({ port: process.env.PORT || 3000, host: process.env.HOST || '0.0.0.0' })
 } catch (err) {
   server.log.fatal(err.message)
   await server.close()
