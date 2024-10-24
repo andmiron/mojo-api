@@ -1,0 +1,28 @@
+### HEALTHCHECK
+GET http://localhost:3000/health
+Accept: application/json
+
+### SIGNUP
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+ "email": "asd@asd.com",
+ "password": "1111111111"
+}
+
+### LOGIN
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "asd@asd.com",
+  "password": "1111111111"
+}
+
+### LOGOUT
+POST http://localhost:3000/logout
+
+### VERIFY EMAIL
+GET http://localhost:3000/api/v1/auth/verify?token=b25bb5340587b46d7f1a4f7a9b4345945c16c5d61477417bfa593d96b507442a
+Accept: application/json
